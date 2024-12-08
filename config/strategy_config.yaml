@@ -1,0 +1,20 @@
+data:
+  db_path: "src/data/database/candles.db"
+  table_name: "candles"
+  interval: 1
+
+strategy:
+  lookback_period: 20
+  atr_period: 14
+  risk_free_rate: 0.05
+  initial_capital: 100000
+  risk_per_trade: 0.01
+  vol_threshold: 1.5
+
+backtest:
+  start_date: "2024-06-08"
+  end_date: "2024-07-05"
+
+logging:
+  level: "INFO"
+  file: "logs/strategy.log"
