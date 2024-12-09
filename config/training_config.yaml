@@ -1,0 +1,38 @@
+# Data configuration
+data:
+  db_path: "src/data/database/candles.db"
+  table_name: "candles"
+  interval: "1min"
+
+# Training parameters
+test_size: 0.2
+lookback: 30
+epochs: 50
+batch_size: 32
+rl_timesteps: 10000
+
+# Strategy configuration
+strategy_config:
+  risk_per_trade: 0.01
+  account_size: 100000
+  atr_period: 14
+  
+  # Support/Resistance parameters
+  sr_threshold: 0.7
+  sr_lookback: 20
+  
+  # Breakout parameters
+  breakout_volume_multiplier: 1.5
+  breakout_atr_multiplier: 2
+  
+  # Market condition parameters
+  trend_ma_short: 20
+  trend_ma_long: 50
+  
+  # Pullback parameters
+  pullback_threshold: 0.5
+  pullback_atr_multiplier: 1
+  
+  # Position sizing
+  max_position_size: 0.1
+  risk_reward_ratio: 2
